@@ -33,7 +33,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class lv2and3Activity extends AppCompatActivity {
-    private static final String TAG = "myLog";
     Handler myHandlder = new MyHandlder();
     RecyclerView myrecyclerview;
     List<String> titlelist = new ArrayList<String>();
@@ -53,7 +52,7 @@ public class lv2and3Activity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            for(int i=0;i<datas.length();i++){
+            for (int i = 0; i < datas.length(); i++) {
                 try {
                     JSONObject jsonObject = datas.getJSONObject(i);
                     titlelist.add(jsonObject.getString("title"));
@@ -64,13 +63,13 @@ public class lv2and3Activity extends AppCompatActivity {
                 }
 
             }
-            myAdapter myadapter=new myAdapter(titlelist, shareUserlist, linklist);
+            myAdapter myadapter = new myAdapter(titlelist, shareUserlist, linklist);
             myrecyclerview.setAdapter(myadapter);
             myadapter.setOnURLClickListener(new myAdapter.OnURLClickListener() {
                 @Override
                 public void OnClick(String URL) {
                     Intent intent = new Intent(getApplicationContext(), newURLActivity.class);
-                    intent.putExtra("url",URL);
+                    intent.putExtra("url", URL);
                     startActivity(intent);
                 }
             });
@@ -90,6 +89,8 @@ public class lv2and3Activity extends AppCompatActivity {
 
     private void initData() {
         new Thread(new Runnable() {
+            private OkHttpClient client;
+
             @Override
             public void run() {
                 OkHttpClient client = new OkHttpClient();

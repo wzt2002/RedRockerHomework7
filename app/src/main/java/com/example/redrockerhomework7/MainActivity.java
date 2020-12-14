@@ -20,32 +20,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn=(Button)findViewById(R.id.button);
+        Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(this);
-        Button btn2=(Button)findViewById(R.id.button2);
+        Button btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(this);
-        Button btn3=(Button)findViewById(R.id.button3);
+        Button btn3 = (Button) findViewById(R.id.button3);
         btn3.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button:
                 enterActivity(lv1Activity.class);
                 break;
             case R.id.button2:
-           enterActivity(lv2and3Activity.class);
-
-
+                enterActivity(lv2and3Activity.class);
                 break;
             case R.id.button3:
                 enterActivity(lv4Activity.class);
                 break;
         }
     }
-    public void enterActivity(Class cla){
-        Intent intent = new Intent(this,cla);
+
+    public void enterActivity(Class cla) {
+        Intent intent = new Intent(this, cla);
         startActivity(intent);
     }
 }

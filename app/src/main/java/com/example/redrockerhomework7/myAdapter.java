@@ -17,9 +17,9 @@ import java.util.List;
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
     WebView webview;
-    List<String> titlelist=new ArrayList<String>();
-    List<String> shareUserlist=new ArrayList<String>();
-    List<String> linklist=new ArrayList<String>();
+    List<String> titlelist = new ArrayList<String>();
+    List<String> shareUserlist = new ArrayList<String>();
+    List<String> linklist = new ArrayList<String>();
     OnURLClickListener onURLClickListener;
 
     public myAdapter(List<String> titlelist, List<String> shareUserlist, List<String> linklist) {
@@ -28,16 +28,16 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
         this.linklist = linklist;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         TextView shareUser;
         TextView link;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            title=itemView.findViewById(R.id.title);
-            shareUser=itemView.findViewById(R.id.shareUser);
-            link=itemView.findViewById(R.id.link);
+            title = itemView.findViewById(R.id.title);
+            shareUser = itemView.findViewById(R.id.shareUser);
+            link = itemView.findViewById(R.id.link);
             webview = itemView.findViewById(R.id.webview);
         }
     }
@@ -46,7 +46,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
     @Override
     public myAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
-        ViewHolder holder=new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
@@ -69,9 +69,10 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
         return titlelist.size();
     }
 
-    public void setOnURLClickListener(OnURLClickListener onURLClickListener){
-        this.onURLClickListener=onURLClickListener;
+    public void setOnURLClickListener(OnURLClickListener onURLClickListener) {
+        this.onURLClickListener = onURLClickListener;
     }
+
     public interface OnURLClickListener {
         public void OnClick(String URL);
     }

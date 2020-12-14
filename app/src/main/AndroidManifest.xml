@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RedRockerHomework7">
-        <activity android:name=".newURLActivity"></activity>
+        <activity android:name=".Register"></activity>
+        <activity android:name=".newURLActivity" />
         <activity android:name=".lv4Activity" />
         <activity android:name=".lv2and3Activity" />
         <activity android:name=".lv1Activity" />
