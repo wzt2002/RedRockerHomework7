@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        app:cardBackgroundColor="#FFFAE3"
+        card_view:cardCornerRadius="46dp"
+        card_view:cardElevation="14dp"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/title"
+                android:text="这是标题"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp">
+            <TextView
+                android:textSize="30dp"
+                android:gravity="center"
+                android:id="@+id/shareUser"
+                android:text="这是shareUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+            <TextView
+                android:textSize="15dp"
+                android:textColor="#43DD88"
+                android:gravity="center"
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Link"></TextView>
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
